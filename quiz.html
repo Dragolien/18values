@@ -152,7 +152,7 @@ stats"></a></div></noscript>
             return (50 + (50*score/max)).toFixed(1)
         }
         if (score < 0) {
-            return (50 - (50*score/min)).toFixed(1)
+            return (50 + (50*score/min)).toFixed(1)
         }
     }
     function results() {
