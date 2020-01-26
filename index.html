@@ -1,56 +1,60 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:400,700" rel="stylesheet">
 <link href='style.css' rel='stylesheet' type='text/css'>
-<title>16values</title>
+<title>18values</title>
 <link rel="icon" type="x-icon" href="icon.png">
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
 </head>
 <body>
 
-<h1>16values</h1>
+<h1>18values</h1>
 <hr>
 <button class="button" onclick="location.href='instructions.html';" style="font-size:36pt;">Click here to start!</button>
 <img src="values.svg" class="center"></img>
 
-<h2>What is 16values?</h2>
-    <p>16values is, in essence, a political quiz that attempts to assign percentages for sixteen different political values. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
+<h2>What is 18values?</h2>
+    <p>18values is, in essence, a political quiz that attempts to assign percentages for eighteen different political values. You will be presented by a statement, and then you will answer with your opinion on the statement, from <b>Strongly Agree</b> to <b>Strongly Disagree</b>, with each answer slightly affecting your scores. At the end of the quiz, your answers will be compared to the maximum possible for each value, thus giving you a percentage. Answer honestly!<br /><br />
     There are <b><u><span id="numOfQuestions"></span></u></b> questions in the test.</p>
 
-<h2>What are the sixteen values?</h2>
-    <p>There are eight independent axes and each has two opposing values assigned to them. They are:</p>
-    <p class="value-description"><b style="color:#d32f2f;">Equality</b><br/>
-        Those with higher Equality scores believe the economy should distribute value evenly among the populace. They tend to support progressive tax codes, social programs, and at high values, socialism.</p>
+<h2>What are the eighteen values?</h2>
+    <p>There are nine independent axes and each has two opposing values assigned to them. They are:</p>
+    <p class="value-description"><b style="color:#d32f2f;">Constructivism</b><br/>
+        Those with higher Constructivism scores believe </p>
     <p class="value-description"><b style="color:#00796b;">Markets</b><br/>
-        Those with higher Market scores believe the economy should be focused on rapid growth. They tend to support lower taxes, privatization, deregulation, and at high values, laissez-faire capitalism.</p>
+        Those with higher Essentialism scores believe </p>
     <p class="value-description"><b style="color:#f57c00;">Nation</b><br/>
-        Those with higher Nation scores are patriotic and nationalist. They often believe in an aggressive foreign policy, valuing the military, strength, sovereignty, and at high values, territorial expansion.</p>
+        Those with higher Progressivism scores believe in social change and rationality. They usually support environmental action and scientific or technological research.</p>
     <p class="value-description"><b style="color:#0288d1;">Globe</b><br/>
-        Those with higher Globe scores are cosmopolitan and globalist. They often believe in a peaceful foreign policy, emphasizing diplomacy, cooperation, integration, and at high values, a world government.</p>
+        Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they usually support the status quo or the status quo ante.</p>
     <p class="value-description"><b style="color:#fbc02d;">Liberty</b><br/>
-        Those with higher Liberty scores believe in strong civil liberties. They tend to support democracy and oppose state intervention in personal lives. Note that this refers to civil liberties, not economic liberties.</p>
+        Those with higher Federal scores believe in strong local governments.</p>
     <p class="value-description"><b style="color:#303f9f;">Authority</b><br/>
-        Those with higher Authority scores believe in strong state power. They tend to support state intervention in personal lives, government surveillance, and at high values, censorship or autocracy.</p>
+        Those with higher Unitary scores believe in strong central governments.</p>
     <p class="value-description"><b style="color:#689f38;">Tradition</b><br/>
-        Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.</p>
+        Those with higher Secularism scores believe in the separation of religion and the state.</p>
     <p class="value-description"><b style="color:#7b1fa2;">Progress</b><br/>
-        Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.</p>
+        Those with higher Religion scores believe in the presence of religion within the state.</p>
     <p class="value-description"><b style="color:#d32f2f;">Equality</b><br/>
-        Those with higher Equality scores believe the economy should distribute value evenly among the populace. They tend to support progressive tax codes, social programs, and at high values, socialism.</p>
+        Those with higher Authority scores believe in state intervention in personal lives, government surveillance, and restrictive criminal law.</p>
     <p class="value-description"><b style="color:#00796b;">Markets</b><br/>
-        Those with higher Market scores believe the economy should be focused on rapid growth. They tend to support lower taxes, privatization, deregulation, and at high values, laissez-faire capitalism.</p>
+        Those with higher Liberty scores believe in strong civil liberties. They oppose state intervention in personal lives and generally support legalisation of victimless crimes.</p>
     <p class="value-description"><b style="color:#f57c00;">Nation</b><br/>
-        Those with higher Nation scores are patriotic and nationalist. They often believe in an aggressive foreign policy, valuing the military, strength, sovereignty, and at high values, territorial expansion.</p>
+        Those with higher Democracy scores believe in the use of elections and popular opinion to determine state policy.</p>
     <p class="value-description"><b style="color:#0288d1;">Globe</b><br/>
-        Those with higher Globe scores are cosmopolitan and globalist. They often believe in a peaceful foreign policy, emphasizing diplomacy, cooperation, integration, and at high values, a world government.</p>
+        Those with higher Autocracy scores believe in a single person or party possessing absolute power. They do not trust popular opinion and prefer to rely on the judgement of a single entity.</p>
     <p class="value-description"><b style="color:#fbc02d;">Liberty</b><br/>
-        Those with higher Liberty scores believe in strong civil liberties. They tend to support democracy and oppose state intervention in personal lives. Note that this refers to civil liberties, not economic liberties.</p>
+        Those with higher Globalism scores believe in the existence of international organisations and cooperation. They believe nations should unite to advance common interests.</p>
     <p class="value-description"><b style="color:#303f9f;">Authority</b><br/>
-        Those with higher Authority scores believe in strong state power. They tend to support state intervention in personal lives, government surveillance, and at high values, censorship or autocracy.</p>
+        Those with higher Nationalism scores believe in avoiding international relations. They value sovereignty and will often disregard international opinion if it is against them.</p>
     <p class="value-description"><b style="color:#689f38;">Tradition</b><br/>
-        Those with higher Tradition scores believe in traditional values and strict adherence to a moral code. Though not always, they are usually religious, and support the status quo or the status quo ante.</p>
+        Those with higher Ideology scores believe </p>
     <p class="value-description"><b style="color:#7b1fa2;">Progress</b><br/>
-        Those with higher Progress scores believe in social change and rationality. Though not always, they are usually secular or atheist, and support environmental action and scientific or technological research.</p>
+        Those with higher Pragmatism scores believe </p>
+    <p class="value-description"><b style="color:#689f38;">Tradition</b><br/>
+        Those with higher Free Market scores believe </p>
+    <p class="value-description"><b style="color:#7b1fa2;">Progress</b><br/>
+        Those with higher Planned Economy scores believe </p>
 <h2>What's the "Closest Match" mean at the bottom of the results?</h2>
     <p>In addition to matching you to the eight values, the quiz also attempts to match you to a political ideology. This is a work in progress and is much less accurate than the values and axes, so don't take it too seriously. If you disagree with your assigned ideology, send us an email at eightvalues@gmail.com with your scores, matched ideology, and preferred ideology, and we'll look into adjusting the system. Thanks!</p>
 
