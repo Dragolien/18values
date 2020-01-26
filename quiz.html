@@ -149,7 +149,7 @@ stats"></a></div></noscript>
     }
     function calc_score(score,max,min) {
         if (score >= 0) {
-            return Math.round((50 + (50*score/max))*100)/100;
+            return Math.round((50 + (50*score/max))*10)/10;
         }
         if (score < 0) {
             return Math.round((50 - (50*score/min))*100)/100;
