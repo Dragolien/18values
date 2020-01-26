@@ -26,6 +26,41 @@
     <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
     <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
 </div>
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+</div>
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+</div>
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+</div>
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+</div>
+<h2>Economic Axis: <span class="weight-300" id="economic-label"></span></h2>
+<div class="axis">
+    <img id="img-equality" src="value_images/equality.svg" height="128pt"/>
+    <div class="bar equality" id="bar-equality"><div class="text-wrapper" id="equality"></div></div>
+    <div class="bar wealth" id="bar-wealth"><div class="text-wrapper" id="wealth"></div></div>
+    <img id="img-wealth" src="value_images/wealth.svg" height="128pt"/>
+</div>
 <h2>Diplomatic Axis: <span class="weight-300" id="diplomatic-label"></span></h2>
 <div class="axis">
     <img id="img-might" src="value_images/might.svg" height="128pt"/>
@@ -47,12 +82,17 @@
     <div class="bar progress" id="bar-progress"><div class="text-wrapper" id="progress"></div></div>
     <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
 </div>
+	
+	
+	
 <h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
 <p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
 <p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
 <hr/>
 <img src="" id="banner">
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
+	
+	
 <!-- Website visit statistics - no personal information is collected! -->
 <script type="text/javascript">
 var sc_project=11325211;
@@ -70,6 +110,8 @@ class="statcounter"
 src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
 stats"></a></div></noscript>
 <script>
+	
+	
     function getQueryVariable(variable)
     {
            var query = window.location.search.substring(1)
@@ -108,43 +150,63 @@ stats"></a></div></noscript>
         	{return ""}
     }
 
-    equality  = getQueryVariable("e")
-    peace     = getQueryVariable("d")
-    liberty   = getQueryVariable("g")
-    progress  = getQueryVariable("s")
-    wealth    = (100 - equality).toFixed(1)
-    might     = (100 - peace   ).toFixed(1)
-    authority = (100 - liberty ).toFixed(1)
-    tradition = (100 - progress).toFixed(1)
+    constructivism  = getQueryVariable("1")
+    progressivism  = getQueryVariable("2")
+    federal  = getQueryVariable("3")
+    secularism  = getQueryVariable("4")
+    authority  = getQueryVariable("5")
+    democracy  = getQueryVariable("6")
+    globalism  = getQueryVariable("7")
+    ideology  = getQueryVariable("8")
+    free_market  = getQueryVariable("9")
+    essentialism    = (100 - constructivism).toFixed(1)
+    tradition    = (100 - progressivism).toFixed(1)
+    unitary    = (100 - federal).toFixed(1)
+    religion    = (100 - secularism).toFixed(1)
+    liberty    = (100 - authority).toFixed(1)
+    autocracy    = (100 - democracy).toFixed(1)
+    nationalism    = (100 - globalism).toFixed(1)
+    pragmatism    = (100 - ideology).toFixed(1)
+    planned_economy    = (100 - free_market).toFixed(1)
 
-    setBarValue("equality", equality)
-    setBarValue("wealth", wealth)
-    setBarValue("peace", peace)
-    setBarValue("might", might)
-    setBarValue("liberty", liberty)
+    setBarValue("constructivism", constructivism)
+    setBarValue("progressivism", progressivism)
+    setBarValue("federal", federal)
+    setBarValue("secularism", secularism)
     setBarValue("authority", authority)
-    setBarValue("progress", progress)
-    setBarValue("tradition", tradition)
+    setBarValue("democracy", democracy)
+    setBarValue("globalism", globalism)
+	setBarValue("ideology", ideology)
+	setBarValue("free_market", free_market)
+	setBarValue("essentialism", essentialism)
+	setBarValue("tradition", tradition)
+	setBarValue("unitary", unitary)
+	setBarValue("religion", religion)
+	setBarValue("liberty", liberty)
+	setBarValue("autocracy", autocracy)
+	setBarValue("nationalism", nationalism)
+	setBarValue("pragmatism", pragmatism)
+	setBarValue("planned_economy", planned_economy)
 
-    document.getElementById("economic-label").innerHTML = setLabel(equality, econArray)
-    document.getElementById("diplomatic-label").innerHTML = setLabel(peace, diplArray)
-    document.getElementById("state-label").innerHTML = setLabel(liberty, govtArray)
-    document.getElementById("society-label").innerHTML = setLabel(progress, sctyArray)
+    document.getElementById("economic-label").innerHTML = setLabel(constructivism, econArray)
+    document.getElementById("diplomatic-label").innerHTML = setLabel(progressivism, diplArray)
+    document.getElementById("state-label").innerHTML = setLabel(federal, govtArray)
+    document.getElementById("society-label").innerHTML = setLabel(secularism, sctyArray)
 
-    ideology = ""
+    ideology1 = ""
     ideodist = Infinity
     for (var i = 0; i < ideologies.length; i++) {
         dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - equality), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - liberty), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - peace), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - progress), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.econ - constructivism), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.govt - progressivism), 2)
+        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - federal), 1.73856063)
+        dist += Math.pow(Math.abs(ideologies[i].stats.scty - secularism), 1.73856063)
         if (dist < ideodist) {
-            ideology = ideologies[i].name
+            ideology1 = ideologies[i].name
             ideodist = dist
         }
     }
-    document.getElementById("ideology-label").innerHTML = ideology
+    document.getElementById("ideology-label").innerHTML = ideology1
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
