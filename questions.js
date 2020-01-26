@@ -12,14 +12,14 @@ questions = [
             "right_4": 20,
             "left_5": 30,
             "right_5": 10,
-            "left_6": 0,
-            "right_6": 0,
-            "left_7": 0,
-            "right_7": 0,
-            "left_8": 0,
-            "right_8": 0,
-            "left_9": 0,
-            "right_9": 0,
+            "left_6": 10,
+            "right_6": 20,
+            "left_7": 30,
+            "right_7": 10,
+            "left_8": 20,
+            "right_8": 40,
+            "left_9": 50,
+            "right_9": 50,
         }
     }
 ];
