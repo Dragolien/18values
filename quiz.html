@@ -149,10 +149,10 @@ stats"></a></div></noscript>
     }
     function calc_score(score,max,min) {
         if (score >= 0) {
-            return (50 + (50*score/max))
+            return (50 + (50*score/max));
         }
         if (score < 0) {
-            return (50 - (50*score/min))
+            return (50 - (50*score/min));
         }
     }
     function results() {
@@ -165,7 +165,7 @@ stats"></a></div></noscript>
             + `&f=${calc_score(s_6, max_6, min_6)}`
             + `&g=${calc_score(s_7, max_7, min_7)}`
             + `&h=${calc_score(s_8, max_8, min_8)}`
-            + `&i=${calc_score(s_9, max_9, min_9)}`
+            + `&i=${calc_score(s_9, max_9, min_9)}`;
     }
 </script>
 </body>
