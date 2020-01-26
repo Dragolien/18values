@@ -149,10 +149,10 @@ stats"></a></div></noscript>
     }
     function calc_score(score,max,min) {
         if (score >= 0) {
-            return (50 + (50*score/max));
+            return Math.round((50 + (50*score/max))*100)/100;
         }
         if (score < 0) {
-            return (50 - (50*score/min));
+            return Math.round((50 - (50*score/min))*100)/100;
         }
     }
     function results() {
