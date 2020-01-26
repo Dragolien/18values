@@ -5,9 +5,6 @@
 <link rel="icon" type="x-icon" href="icon.png">
 <link rel="shortcut icon" type="x-icon" href="icon.png">
 <meta charset="utf-8">
-<script>
-  version = "Test Edition #1" //Remember to update this before making changes to the test itself!
-</script>
 </head>
 <script type="application/javascript"
         src="ideologies.js">
@@ -48,32 +45,10 @@
     <img id="img-progress" src="value_images/progress.svg" height="128pt"/>
 </div>
 	
-	
-	
-<h2>Closest Match: <span class="weight-300" id="ideology-label"></span></h2>
-<p>Ideological matching is a work in progress, and is much less accurate than the values and axes.</p>
-<p>You can send these results by copying and pasting the URL at the top of the page or using the image below. Think your matched ideology was wrong? Want to help us calibrate the test? Send the results along with your political ideology to us at eightvalues@gmail.com, or send us any comments, questions, or criticism. </p>
-<hr/>
+
 <img src="" id="banner">
 <button class="button" onclick="location.href='index.html';" style="background-color: #2196f3;">Back</button> <br>
-	
-	
-<!-- Website visit statistics - no personal information is collected! -->
-<script type="text/javascript">
-var sc_project=11325211;
-var sc_invisible=1;
-var sc_security="fd9f0659";
-var scJsHost = (("https:" == document.location.protocol) ?
-"https://secure." : "http://www.");
-document.write("<sc"+"ript type='text/javascript' src='" +
-scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="web stats"
-href="http://statcounter.com/" target="_blank"><img
-class="statcounter"
-src="//c.statcounter.com/11325211/0/fd9f0659/1/" alt="web
-stats"></a></div></noscript>
+
 <script>
 	
 	
@@ -124,15 +99,15 @@ stats"></a></div></noscript>
 	globalism  = getQueryVariable("g")
 	ideology  = getQueryVariable("h")
 	free_market  = getQueryVariable("i")
-	essentialism    = (100 - constructivism).toFixed(1)
-	tradition    = (100 - progressivism).toFixed(1)
-	unitary    = (100 - federal).toFixed(1)
-	religion    = (100 - secularism).toFixed(1)
-	liberty    = (100 - authority).toFixed(1)
-	autocracy    = (100 - democracy).toFixed(1)
-	nationalism    = (100 - globalism).toFixed(1)
-	pragmatism    = (100 - ideology).toFixed(1)
-	planned_economy    = (100 - free_market).toFixed(1)
+	essentialism    = 100 - constructivism
+	tradition    = 100 - progressivism
+	unitary    = 100 - federal
+	religion    = 100 - secularism
+	liberty    = 100 - authority
+	autocracy    = 100 - democracy
+	nationalism    = 100 - globalism
+	pragmatism    = 100 - ideology
+	planned_economy    = 100 - free_market
 
     setBarValue("constructivism", constructivism)
 	setBarValue("progressivism", progressivism)
@@ -157,21 +132,6 @@ stats"></a></div></noscript>
     document.getElementById("diplomatic-label").innerHTML = setLabel(progressivism, diplArray)
     document.getElementById("state-label").innerHTML = setLabel(federal, govtArray)
     document.getElementById("society-label").innerHTML = setLabel(secularism, sctyArray)
-
-    ideology1 = ""
-    ideodist = Infinity
-    for (var i = 0; i < ideologies.length; i++) {
-        dist = 0
-        dist += Math.pow(Math.abs(ideologies[i].stats.econ - constructivism), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.govt - progressivism), 2)
-        dist += Math.pow(Math.abs(ideologies[i].stats.dipl - federal), 1.73856063)
-        dist += Math.pow(Math.abs(ideologies[i].stats.scty - secularism), 1.73856063)
-        if (dist < ideodist) {
-            ideology1 = ideologies[i].name
-            ideodist = dist
-        }
-    }
-    document.getElementById("ideology-label").innerHTML = ideology1
 
     function createImage(src, x, y, w, h) {
         img = new Image ()
@@ -246,7 +206,7 @@ stats"></a></div></noscript>
         if (religion  > 30) {ctx.fillText(religion + "%", 670, 597.5)}
 
         ctx.font="300 30px Montserrat"
-        ctx.fillText("8values.github.io", 780, 60)
+        ctx.fillText("16values.github.io", 780, 60)
 		ctx.fillText(version, 780, 90)
         ctx.textAlign="center"
         ctx.fillText("Economic Axis: " + document.getElementById("economic-label").innerHTML, 400, 175)
