@@ -11,7 +11,7 @@ questions = [
             "left_4": 10,
             "right_4": 20,
             "left_5": 30,
-            "right_5": 10,
+            "right_5": 20,
             "left_6": 10,
             "right_6": 20,
             "left_7": 30,
