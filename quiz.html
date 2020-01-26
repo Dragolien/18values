@@ -98,15 +98,15 @@ stats"></a></div></noscript>
                 s_9 += mult*questions[qn].effect.right_9
         }
         if (mult < 0) {
-                s_1 -= mult*questions[qn].effect.left_1
-                s_2 -= mult*questions[qn].effect.left_2
-                s_3 -= mult*questions[qn].effect.left_3
-                s_4 -= mult*questions[qn].effect.left_4
-                s_5 -= mult*questions[qn].effect.left_5
-                s_6 -= mult*questions[qn].effect.left_6
-                s_7 -= mult*questions[qn].effect.left_7
-                s_8 -= mult*questions[qn].effect.left_8
-                s_9 -= mult*questions[qn].effect.left_9
+                s_1 += mult*questions[qn].effect.left_1
+                s_2 += mult*questions[qn].effect.left_2
+                s_3 += mult*questions[qn].effect.left_3
+                s_4 += mult*questions[qn].effect.left_4
+                s_5 += mult*questions[qn].effect.left_5
+                s_6 += mult*questions[qn].effect.left_6
+                s_7 += mult*questions[qn].effect.left_7
+                s_8 += mult*questions[qn].effect.left_8
+                s_9 += mult*questions[qn].effect.left_9
         }
         qn++;
         prev_answer = mult;
