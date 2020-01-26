@@ -122,15 +122,15 @@ stats"></a></div></noscript>
         }
         qn--;
         if (mult > 0) {
-                s_1 -= mult*questions[qn].effect.right_1
-                s_2 -= mult*questions[qn].effect.right_2
-                s_3 -= mult*questions[qn].effect.right_3
-                s_4 -= mult*questions[qn].effect.right_4
-                s_5 -= mult*questions[qn].effect.right_5
-                s_6 -= mult*questions[qn].effect.right_6
-                s_7 -= mult*questions[qn].effect.right_7
-                s_8 -= mult*questions[qn].effect.right_8
-                s_9 -= mult*questions[qn].effect.right_9
+                s_1 += mult*questions[qn].effect.right_1
+                s_2 += mult*questions[qn].effect.right_2
+                s_3 += mult*questions[qn].effect.right_3
+                s_4 += mult*questions[qn].effect.right_4
+                s_5 += mult*questions[qn].effect.right_5
+                s_6 += mult*questions[qn].effect.right_6
+                s_7 += mult*questions[qn].effect.right_7
+                s_8 += mult*questions[qn].effect.right_8
+                s_9 += mult*questions[qn].effect.right_9
         }
         if (mult < 0) {
                 s_1 += mult*questions[qn].effect.left_1
