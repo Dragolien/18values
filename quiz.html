@@ -41,18 +41,36 @@ stats"></a></div></noscript>
 
 <!-- JavaScript for the test itself -->
 <script>
-    var max_econ, max_dipl, max_govt, max_scty; // Max possible scores
-    max_econ = max_dipl = max_govt = max_scty = 0;
-    var econ, dipl, govt, scty; // User's scores
-    econ = dipl = govt = scty = 0;
+    var max_1, max_2, max_3, max_4, max_5, max_6, max_7, max_8, max_9; // Max possible scores
+    max_1 = max_2 = max_3 = max_4 = max_5 = max_6 = max_7 = max_8 = max_9 = 0;
+    var min_1, min_2, min_3, min_4, min_5, min_6, min_7, min_8, min_9; // Min possible scores
+    min_1 = min_2 = min_3 = min_4 = min_5 = min_6 = min_7 = min_8 = min_9 = 0;
+    var s_1, s_2, s_3, s_4, s_5, s_6, s_7, s_8, s_9; // User's scores
+    s_1 = s_2 = s_3 = s_4 = s_5 = s_6 = s_7 = s_8 = s_9 = 0;
     var qn = 0; // Question number
     var prev_answer = null;
     init_question();
     for (var i = 0; i < questions.length; i++) {
-        max_econ += Math.abs(questions[i].effect.econ)
-        max_dipl += Math.abs(questions[i].effect.dipl)
-        max_govt += Math.abs(questions[i].effect.govt)
-        max_scty += Math.abs(questions[i].effect.scty)
+        max_1 += questions[i].effect.right_1
+        max_2 += questions[i].effect.right_2
+        max_3 += questions[i].effect.right_3
+        max_4 += questions[i].effect.right_4
+        max_5 += questions[i].effect.right_5
+        max_6 += questions[i].effect.right_6
+        max_7 += questions[i].effect.right_7
+        max_8 += questions[i].effect.right_8
+        max_9 += questions[i].effect.right_9
+    }
+    for (var i = 0; i < questions.length; i++) {
+        min_1 -= questions[i].effect.left_1
+        min_2 -= questions[i].effect.left_2
+        min_3 -= questions[i].effect.left_3
+        min_4 -= questions[i].effect.left_4
+        min_5 -= questions[i].effect.left_5
+        min_6 -= questions[i].effect.left_6
+        min_7 -= questions[i].effect.left_7
+        min_8 -= questions[i].effect.left_8
+        min_9 -= questions[i].effect.left_9
     }
     function init_question() {
         document.getElementById("question-text").innerHTML = questions[qn].question;
@@ -68,10 +86,28 @@ stats"></a></div></noscript>
     }
 
     function next_question(mult) {
-        econ += mult*questions[qn].effect.econ
-        dipl += mult*questions[qn].effect.dipl
-        govt += mult*questions[qn].effect.govt
-        scty += mult*questions[qn].effect.scty
+        if (mult > 0) {
+                s_1 += mult*questions[qn].effect.right_1
+                s_2 += mult*questions[qn].effect.right_2
+                s_3 += mult*questions[qn].effect.right_3
+                s_4 += mult*questions[qn].effect.right_4
+                s_5 += mult*questions[qn].effect.right_5
+                s_6 += mult*questions[qn].effect.right_6
+                s_7 += mult*questions[qn].effect.right_7
+                s_8 += mult*questions[qn].effect.right_8
+                s_9 += mult*questions[qn].effect.right_9
+        }
+        if (mult < 0) {
+                s_1 -= mult*questions[qn].effect.left_1
+                s_2 -= mult*questions[qn].effect.left_2
+                s_3 -= mult*questions[qn].effect.left_3
+                s_4 -= mult*questions[qn].effect.left_4
+                s_5 -= mult*questions[qn].effect.left_5
+                s_6 -= mult*questions[qn].effect.left_6
+                s_7 -= mult*questions[qn].effect.left_7
+                s_8 -= mult*questions[qn].effect.left_8
+                s_9 -= mult*questions[qn].effect.left_9
+        }
         qn++;
         prev_answer = mult;
         if (qn < questions.length) {
@@ -85,23 +121,46 @@ stats"></a></div></noscript>
             return;
         }
         qn--;
-        econ -= prev_answer * questions[qn].effect.econ;
-        dipl -= prev_answer * questions[qn].effect.dipl;
-        govt -= prev_answer * questions[qn].effect.govt;
-        scty -= prev_answer * questions[qn].effect.scty;
+        if (mult > 0) {
+                s_1 -= mult*questions[qn].effect.right_1
+                s_2 -= mult*questions[qn].effect.right_2
+                s_3 -= mult*questions[qn].effect.right_3
+                s_4 -= mult*questions[qn].effect.right_4
+                s_5 -= mult*questions[qn].effect.right_5
+                s_6 -= mult*questions[qn].effect.right_6
+                s_7 -= mult*questions[qn].effect.right_7
+                s_8 -= mult*questions[qn].effect.right_8
+                s_9 -= mult*questions[qn].effect.right_9
+        }
+        if (mult < 0) {
+                s_1 += mult*questions[qn].effect.left_1
+                s_2 += mult*questions[qn].effect.left_2
+                s_3 += mult*questions[qn].effect.left_3
+                s_4 += mult*questions[qn].effect.left_4
+                s_5 += mult*questions[qn].effect.left_5
+                s_6 += mult*questions[qn].effect.left_6
+                s_7 += mult*questions[qn].effect.left_7
+                s_8 += mult*questions[qn].effect.left_8
+                s_9 += mult*questions[qn].effect.left_9
+        }
         prev_answer = null;
         init_question();
 
     }
-    function calc_score(score,max) {
-        return (100*(max+score)/(2*max)).toFixed(1)
+    function calc_score(score,max,min) {
+        return (100*((max+min)/2 +score)/(max+min)).toFixed(1)
     }
     function results() {
         location.href = `results.html`
-            + `?e=${calc_score(econ,max_econ)}`
-            + `&d=${calc_score(dipl,max_dipl)}`
-            + `&g=${calc_score(govt,max_govt)}`
-            + `&s=${calc_score(scty,max_scty)}`
+            + `?a=${calc_score(s_1, max_1, min_1)}`
+            + `&b=${calc_score(s_2, max_2, min_2)}`
+            + `&c=${calc_score(s_3, max_3, min_3)}`
+            + `&d=${calc_score(s_4, max_4, min_4)}`
+            + `&e=${calc_score(s_5, max_5, min_5)}`
+            + `&f=${calc_score(s_6, max_6, min_6)}`
+            + `&g=${calc_score(s_7, max_7, min_7)}`
+            + `&h=${calc_score(s_8, max_8, min_8)}`
+            + `&i=${calc_score(s_9, max_9, min_9)}`
     }
 </script>
 </body>
