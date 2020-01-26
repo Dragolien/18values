@@ -148,7 +148,7 @@ stats"></a></div></noscript>
 
     }
     function calc_score(score,max,min) {
-        return (100*((max+min)/2 +score)/(max+min)).toFixed(1)
+        return (100*((max-min)/2 +score)/(max-min)).toFixed(1)
     }
     function results() {
         location.href = `results.html`
